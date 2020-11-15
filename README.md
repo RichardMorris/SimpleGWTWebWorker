@@ -4,7 +4,7 @@ A simple example of a WebWorker coded using the Google Web Toolkit
 It uses the [gwt-webworker](https://gitlab.com/ManfredTremmel/gwt-webworker/) library, from 
 ManfredTremmel which in turn has been taken from [Google speedtracer](https://code.google.com/archive/p/speedtracer/).
 
-The Worker is simply:
+The Worker (org.singsurf.simplewebworker.worker.SimpleWorker) is simply:
 
 ```
 public class SimpleWorker extends DedicatedWorkerEntryPoint 
@@ -28,7 +28,7 @@ public class SimpleWorker extends DedicatedWorkerEntryPoint
 }
 ```
 
-and the client is:
+and the client (org.singsurf.simplewebworker.client.SimpleClient) is:
 
 ```
 public class SimpleClient implements EntryPoint {
@@ -74,7 +74,7 @@ public class SimpleClient implements EntryPoint {
 }
 ```
 
-The worker code needs to be compiles as a separate GWT module using the "dedicatedworker" linker this adds some necessary javascript to the code. The client code can be compiled in
+The worker code needs to be compiles as a separate GWT module using the "dedicatedworker" linker which adds some necessary javascript to the code. The client code can be compiled in
 as a normal module which also inherits the com.google.gwt.webworker.WebWorker module. 
 
 ```
@@ -97,7 +97,6 @@ as a normal module which also inherits the com.google.gwt.webworker.WebWorker mo
   	<entry-point class='org.singsurf.simplewebworker.worker.SimpleWorker'/>
     <source path='worker' />
 </module>
-
-
-
 ```
+
+A sample webpage can be found in the war directory.
