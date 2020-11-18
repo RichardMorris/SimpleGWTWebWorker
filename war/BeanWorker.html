@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+  <head>
+	<meta charset="utf-8">
+    <title>Simple Google WebToolkit WebWorker with autobeans</title>
+    
+    <!--                                           -->
+    <!-- This script loads your compiled module.   -->
+    <!-- If you add any GWT meta tags, they must   -->
+    <!-- be added before this line.                -->
+    <!--                                           -->
+    <script type="text/javascript" src="beanclient/beanclient.nocache.js"></script>
+    
+    <style>
+    .gwt-TextBox {
+    padding: 2px;
+    width: 100px;
+    }
+    #nameFieldContainer .gwt-TextBox {
+    	width: 209px;
+    }
+    </style>
+  </head>
+
+  <!--                                           -->
+  <!-- The body can have arbitrary html, or      -->
+  <!-- you can leave the body empty if you want  -->
+  <!-- to create a completely dynamic UI.        -->
+  <!--                                           -->
+  <body>
+
+    <!-- RECOMMENDED if your web app will not function without JavaScript enabled -->
+    <noscript>
+      <div style="width: 22em; position: absolute; left: 50%; margin-left: -11em; color: red; background-color: white; border: 1px solid red; padding: 4px; font-family: sans-serif">
+        Your web browser must have JavaScript enabled
+        in order for this application to display correctly.
+      </div>
+    </noscript>
+
+    <h1>Simple Google WebToolkit WebWorker</h1>
+
+    <table>
+      <tr>
+        <td colspan="4" style="font-weight:bold;">Infomation to send: </td>        
+      </tr>
+      <tr>
+      	<td>Name</td>
+        <td colspan="2"  id="nameFieldContainer"></td>
+      </tr>
+      <tr>
+      	<td>Data</td>
+        <td id="data1Container"></td>
+        <td id="data2Container"></td>
+        <td id="data3Container"></td>
+        <td id="data4Container"></td>
+      </tr>
+      <tr>
+        <td id="sendButtonContainer"></td>
+ 	  </tr>
+
+		<tr><td>&nbsp;</td></tr>
+	
+ 	  <tr><td style="font-weight:bold;">Results:</td>
+      <tr>
+        <td>Sum</td>
+        <td id="sumContainer"></td>
+        <td>Mean</td>
+        <td id="meanContainer"></td>
+      </tr>
+      <tr>
+        <td colspan="4" style="color:red;" id="errorLabelContainer">&nbsp;</td>
+      </tr>
+    </table>
+
+   <p>This page uses the <a href="http://www.gwtproject.org/">Google Web Toolkit</a> to send messages to a WebWorker also
+   coded in Java and cross compiled to JavaScript. This versions uses 
+   <a href="http://www.gwtproject.org/doc/latest/DevGuideAutoBeans.html">AutoBeans</a>
+   to serialize, deserialize the data to send.
+   
+   <p>The source code can be found at <a href="https://github.com/RichardMorris/SimpleGWTWebWorker">SimpleGWTWebWorker</a>
+   A simpler version which does not use autobeans <a href="SimpleWebWorker.html">SimpleWebWorker</a>.
+   
+    <p>It uses the <a href="https://gitlab.com/ManfredTremmel/gwt-webworker/">gwt-webworker</a> library, from 
+	Manfred Tremmel which in turn has been taken from 
+	<a href="https://code.google.com/archive/p/speedtracer/">Google speedtracer</a> library.
+   
+  </body>
+</html>

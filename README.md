@@ -2,7 +2,7 @@
 A simple example of a WebWorker coded using the Google Web Toolkit
 
 It uses the [gwt-webworker](https://gitlab.com/ManfredTremmel/gwt-webworker/) library, from 
-ManfredTremmel which in turn has been taken from [Google speedtracer](https://code.google.com/archive/p/speedtracer/).
+Manfred Tremmel which in turn has been taken from [Google speedtracer](https://code.google.com/archive/p/speedtracer/).
 
 The Worker (org.singsurf.simplewebworker.worker.SimpleWorker) is simply:
 
@@ -100,3 +100,24 @@ as a normal module which also inherits the com.google.gwt.webworker.WebWorker mo
 ```
 
 A sample webpage can be found in the war directory.
+
+## Serialisation using AutoBeans
+
+A second version of the client and worker uses [AutoBeans](http://www.gwtproject.org/doc/latest/DevGuideAutoBeans.html}. Here factory methods can be
+used to create beans with a given set of getter and setter methods. These beans can then be 
+easily serialised and deserialised to send receive data from the web worker.
+There are three packages for this method
+
+- `org.singsurf.simplewebworker.common` contains methods to create beans and serialised and deserialised them
+- `org.singsurf.simplewebworker.beanclient` contains the BeanClient class
+- `org.singsurf.simplewebworker.beanworker` contains the BeanWorker class.
+
+The sample webpage is in the war directory.
+
+Note that the AutoBean code only works with beans created by the factories using interfaces. The can not
+be used concrete classes implementing the interfaces.
+
+Example web pages using these two mechanisms can be found at
+<a href="https://www.singsurf.org/things/webworker/SimpleWebWorker.html">SimpleWebWorker</a> and <a href="https://www.singsurf.org/things/webworker/BeanWorker.html">BeanWorker</a>.
+
+
