@@ -1,3 +1,5 @@
 /client/
 /worker/
 /WEB-INF/
+/beanclient/
+/beanworker/

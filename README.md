@@ -103,7 +103,7 @@ A sample webpage can be found in the war directory.
 
 ## Serialisation using AutoBeans
 
-A second version of the client and worker uses [AutoBeans](http://www.gwtproject.org/doc/latest/DevGuideAutoBeans.html}. Here factory methods can be
+A second version of the client and worker uses [AutoBeans](http://www.gwtproject.org/doc/latest/DevGuideAutoBeans.html). Here factory methods can be
 used to create beans with a given set of getter and setter methods. These beans can then be 
 easily serialised and deserialised to send receive data from the web worker.
 There are three packages for this method
