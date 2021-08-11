@@ -76,6 +76,7 @@ public class SimpleClient implements EntryPoint {
 
 The worker code needs to be compiles as a separate GWT module using the "dedicatedworker" linker which adds some necessary javascript to the code. The client code can be compiled in
 as a normal module which also inherits the com.google.gwt.webworker.WebWorker module. 
+It all needs to be compiled in production mode, trying to use dev-mode will result in a error about the DedicatedWorkerLinker. The maven configuration has not been set up to allow compilation.
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
